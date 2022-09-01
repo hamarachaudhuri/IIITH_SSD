@@ -1,0 +1,9 @@
+DELIMITER $$
+CREATE PROCEDURE CustomName()
+BEGIN
+	SELECT CUST_NAME FROM customer
+    WHERE CUST_CITY = 'Bangalore';
+END$$
+DELIMITER ;
+
+CALL CustomName();

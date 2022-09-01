@@ -1,0 +1,18 @@
+DELIMITER $$
+CREATE PROCEDURE CustomName()
+BEGIN
+	SELECT CUST_NAME FROM customer
+    WHERE CUST_CITY = 'Bangalore';
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE `HC_Sum`(
+	IN `A` INT,
+	IN `B` INT,
+	OUT `sum_hc` INT
+)
+BEGIN
+	Set sum_hc = A + B;
+END$$
+DELIMITER ;
