@@ -1,0 +1,56 @@
+<!DOCTYPE html>   
+<html>   
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> index.html </title>  
+<style>   
+Body {  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: grey;  
+}  
+button {   
+        background-color: grey;   
+        width: 100%;  
+        color: white;   
+        padding: 10px;   
+        margin: 10px 0px;   
+        border: 1px solid black;   
+        cursor: pointer;   
+         }   
+ form {   
+        border: 3px solid none;   
+    }   
+ input[type=text], input[type=password] {   
+        width: 100%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid grey;   
+        box-sizing: border-box;   
+    }  
+ button:hover {   
+        opacity: 0.7;   
+    }    
+     
+ .container { 
+        width: auto; 
+        padding: 0px 100px;   
+        background-color: white;  
+    }   
+</style>   
+</head>    
+<body>    
+    <center> <h1> Welcome to SSD Lab </h1> </center>   
+    <form action="/studentRecords.html">
+        <div class="container">   
+            <label>Username : </label>   
+            <input type="text" name="username" required>  
+            <label>Password : </label>   
+            <input type="password" name="password" required>  
+            <a href="studentRecords.html">
+              <button type="submit">Login</button></a> 
+            
+        </div>   
+    </form>     
+</body>     
+</html>  

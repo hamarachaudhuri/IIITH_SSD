@@ -1,0 +1,110 @@
+<!DOCTYPE html>   
+<html>   
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> studentRecords.html </title>  
+<style>   
+Body {  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: lightblue;  
+}  
+button {   
+        background-color: green;   
+        width: 100%;  
+        color: white;   
+        padding: 10px;   
+        margin: 10px 0px;   
+        border: 1px solid none;   
+        cursor: pointer;   
+         }   
+button1 {   
+        background-color: red;   
+        width: 100%;  
+        color: white;   
+        padding: 10px;   
+        margin: 10px 0px;   
+        border: 1px solid none;   
+        cursor: pointer;   
+         } 
+ form {   
+        border: 3px solid none;   
+    }   
+ input[type=text], input[type=password] {   
+        width: 50%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid grey;   
+        box-sizing: border-box;   
+    }  
+ button:hover {   
+        opacity: 0.7;   
+    }    
+     
+ button1:hover {   
+        opacity: 0.7;   
+    }   
+ 
+</style>   
+  
+<script>
+ function addNewParaElement() {
+ var mainDiv= document.getElementById("main"); 
+ var newPara = document.createElement("p"); 
+     newPara.innerHTML = "New Child"; 
+     mainDiv.appendChild(newPara);
+} 
+  
+ function deleteNewParaElement() {
+   var list = document.getElementById('list'); 
+   while (list.firstChild) {
+    list.removeChild(list.firstChild);
+   }
+   var newItem = document.createElement('li'); 
+   newItem.textContent = 'Delete Child'; 
+   list.replaceChild(newItem, menu.firstElementChild);
+} 
+  
+</script>
+
+</head>    
+<body>    
+    <center> <h1> Student Records </h1> </center>   
+    <form action="/studentRecords.html">
+        <div class="container"
+             id="main">   
+        
+            <input type="text" placeholder="RollNo" name="RollNo" required>  
+            
+            <input type="password" placeholder="Name" name="Name" required>  
+            <a href="studentRecords.html">
+              <button type="submit"
+                      onclick="addNewParaElement()">Add New</button></a> 
+         
+        </div>   
+    </form>  
+
+  <table>
+    <tr>
+        <th> Roll No.</th>
+        <th> Name </th>
+    </tr>
+    
+  </table>
+  <br>
+  <br>
+   
+  <br>
+  <br>
+  <form action="/studentRecords.html">
+        <div class="container"
+             id="list">   
+         
+            <a href="studentRecords.html">
+              <button1 type="submit"
+                       onclick="deleteNewParaElement()">Delete Last Entry</button1></a> 
+            
+        </div>   
+    </form>  
+</body>     
+</html>  
